@@ -23,7 +23,7 @@ Tend = N*Ts
 #VECTOREN
 tvec = np.arange(0,N/fs,Ts)
 fvec = np.arange(0,fs,fs/(N))
-wvec = np.pi*fvec
+wvec = 2*np.pi*fvec
 s= 1j*wvec
 
 # Laplace polen en nullen map
@@ -49,6 +49,9 @@ Hhalf[int(np.round(N/2)):] = 0 # stel het deel na fs/2 gelijk aan 0
 h = 2*np.real(np.fft.ifft(Hhalf))
 
 
+
+
+ 
 
 plt.figure(2)
 plt.subplot(211)
